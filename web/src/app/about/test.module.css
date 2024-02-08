@@ -1,0 +1,202 @@
+.image {
+  height: 600px;
+  width: auto;
+}
+
+.ctaLinks {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.topBlock {
+  top: -60px;
+}
+
+.backgroundColor {
+  animation: BackgroundImageAnimation 6s linear infinite;
+}
+
+@keyframes BackgroundImageAnimation {
+  0%,
+  100% {
+    background-color: #f4bb46;
+    color: black;
+  }
+  47% {
+    background-color: #f4bb46;
+    color: black;
+  }
+  53% {
+    background-color: #00adee;
+    color: white;
+  }
+  94% {
+    background-color: #00adee;
+    color: white;
+  }
+}
+
+.frontImage {
+  z-index: 2;
+  animation: FrontImageAnimation 6s ease-in infinite;
+}
+
+@keyframes FrontImageAnimation {
+  0%,
+  100% {
+    -webkit-filter: blur(0px);
+    transform: scale(1) translateX(0px);
+  }
+  47% {
+    -webkit-filter: blur(0px);
+    transform: scale(1) translateX(0px);
+  }
+  53% {
+    -webkit-filter: blur(4px);
+    transform: scale(0.9) translateX(200px);
+  }
+  94% {
+    -webkit-filter: blur(4px);
+    transform: scale(0.9) translateX(200px);
+  }
+}
+
+.blurredImage {
+  z-index: 1;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  transform: scale(0.9) translateX(200px);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  animation: BlurredImageAnimation 6s ease-in infinite;
+}
+
+@keyframes BlurredImageAnimation {
+  0%,
+  100% {
+    -webkit-filter: blur(4px);
+    transform: scale(0.9) translateX(200px);
+  }
+  47% {
+    -webkit-filter: blur(4px);
+    transform: scale(0.9) translateX(200px);
+  }
+  53% {
+    -webkit-filter: blur(0px);
+    transform: scale(1) translateX(0px);
+  }
+  94% {
+    -webkit-filter: blur(0px);
+    transform: scale(1) translateX(0px);
+  }
+}
+
+.productsSlider {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.productsSlider > * {
+  position: absolute;
+  top: 0;
+  left: 70%;
+}
+
+.carribeanSauce {
+  color: #37b64d;
+  text-transform: uppercase;
+  animation: FirstFlavorTextAnimation 6s linear infinite;
+}
+
+@keyframes FirstFlavorTextAnimation {
+  0%,
+  100% {
+    position: initial;
+    visibility: visible;
+  }
+  49% {
+    position: initial;
+    visibility: visible;
+  }
+  52% {
+    position: absolute;
+    visibility: hidden;
+  }
+  96% {
+    position: absolute;
+    visibility: hidden;
+  }
+}
+
+.chimchuriSauce {
+  color: #e02626;
+  text-transform: uppercase;
+  animation: SecondFlavorTextAnimation 6s linear infinite;
+}
+
+@keyframes SecondFlavorTextAnimation {
+  0%,
+  100% {
+    position: absolute;
+    visibility: hidden;
+    -webkit-filter: blur(4px);
+    opacity: 0;
+  }
+  49% {
+    position: absolute;
+    visibility: hidden;
+    -webkit-filter: blur(4px);
+    opacity: 0;
+  }
+  52% {
+    position: initial;
+    visibility: visible;
+    -webkit-filter: blur(0);
+    opacity: 1;
+  }
+  96% {
+    position: initial;
+    visibility: visible;
+    -webkit-filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.carribeanBackground {
+  background-color: #37b64d;
+}
+
+.carribeanButtonBackground {
+  background-color: #f5bc47;
+  color: black;
+}
+
+.carribeanLink {
+  color: black;
+}
+
+.argentinaBackground {
+  background-color: #e02626;
+}
+
+.argentinaButtonBackground {
+  background-color: #00adee;
+}
+
+.argentinaLink {
+  color: white;
+}
+
+.otherBackground {
+  background-color: #f6bd48;
+}
+
+.otherButtonBackground {
+  background-color: #1f439d;
+}
+
+.otherLink {
+  color: black;
+}
