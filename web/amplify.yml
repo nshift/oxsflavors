@@ -4,7 +4,7 @@ applications:
       phases:
         preBuild:
           commands:
-            - npm install --omit=dev
+            - npm install
         build:
           commands:
             - npm run build
