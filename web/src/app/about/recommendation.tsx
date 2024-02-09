@@ -2,7 +2,7 @@ import style from './test.module.css'
 
 export default function Values() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '5rem', paddingTop: '5rem' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '5rem', paddingTop: '5rem', overflow: 'hidden' }}>
       <div className="container">
         <h3 className="title">
           <span className={style.carribeanSauce} style={{ textTransform: 'capitalize' }}>

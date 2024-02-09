@@ -38,9 +38,9 @@ export default function Gallery() {
           {sauce.recommendedRecipe && (
             <div className={pageStyles.recommendation}>
               <div className={[pageStyles.storyVideo, pageStyles.recipeVideo].join(' ')}>
-                {/* <div className={pageStyles.videoRecommendation}>
-                  <span className={['bestMatch', pageStyles.bestMatch].join(' ')}>Recommended with</span>
-                </div> */}
+                <div className={pageStyles.videoRecommendation}>
+                  <span className={['bestMatch', pageStyles.bestMatch].join(' ')}>Great with</span>
+                </div>
                 <video playsInline preload="none" poster={sauce.recommendedRecipe.video.poster} controls>
                   <source src={sauce.recommendedRecipe.video.src} type="video/mp4" />
                 </video>
