@@ -15,6 +15,8 @@
 }
 
 .backgroundColor {
+  background-color: #f4bb46;
+  color: black;
   animation: BackgroundImageAnimation 6s linear infinite;
 }
 
@@ -46,56 +48,51 @@
 @keyframes FrontImageAnimation {
   0%,
   100% {
-    -webkit-filter: blur(0px);
+    filter: blur(0px);
     transform: scale(1) translateX(0px);
   }
   47% {
-    -webkit-filter: blur(0px);
+    filter: blur(0px);
     transform: scale(1) translateX(0px);
   }
   53% {
-    -webkit-filter: blur(4px);
+    filter: blur(4px);
     transform: scale(0.9) translateX(200px);
   }
   94% {
-    -webkit-filter: blur(4px);
+    filter: blur(4px);
     transform: scale(0.9) translateX(200px);
   }
 }
 
 .blurredImage {
   z-index: 1;
-  filter: blur(4px);
-  -webkit-filter: blur(4px);
-  transform: scale(0.9) translateX(200px);
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
   animation: BlurredImageAnimation 6s ease-in infinite;
 }
 
 @keyframes BlurredImageAnimation {
   0%,
   100% {
-    -webkit-filter: blur(4px);
+    filter: blur(4px);
     transform: scale(0.9) translateX(200px);
   }
   47% {
-    -webkit-filter: blur(4px);
+    filter: blur(4px);
     transform: scale(0.9) translateX(200px);
   }
   53% {
-    -webkit-filter: blur(0px);
+    filter: blur(0px);
     transform: scale(1) translateX(0px);
   }
   94% {
-    -webkit-filter: blur(0px);
+    filter: blur(0px);
     transform: scale(1) translateX(0px);
   }
 }
 
 .productsSlider {
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  /* -webkit-transition: all 1s ease;
+  transition: all 1s ease; */
 }
 
 .productsSlider > * {
@@ -141,25 +138,25 @@
   100% {
     position: absolute;
     visibility: hidden;
-    -webkit-filter: blur(4px);
+    filter: blur(4px);
     opacity: 0;
   }
   49% {
     position: absolute;
     visibility: hidden;
-    -webkit-filter: blur(4px);
+    filter: blur(4px);
     opacity: 0;
   }
   52% {
-    position: initial;
+    position: relative;
     visibility: visible;
-    -webkit-filter: blur(0);
+    filter: blur(0px);
     opacity: 1;
   }
   96% {
-    position: initial;
+    position: relative;
     visibility: visible;
-    -webkit-filter: blur(0);
+    filter: blur(0px);
     opacity: 1;
   }
 }
@@ -199,4 +196,45 @@
 
 .otherLink {
   color: black;
+}
+
+.storyVideo {
+  width: 80%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.recipeVideo {
+  margin-bottom: 1rem;
+}
+
+.storyVideo video {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.recommendation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0rem;
+  margin-bottom: 3rem;
+}
+
+.videoRecommendation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoRecommendation .bestMatch {
+  position: absolute;
+  top: 0px;
 }
