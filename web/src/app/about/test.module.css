@@ -10,13 +10,7 @@
   align-items: center;
 }
 
-.topBlock {
-  top: -60px;
-}
-
 .backgroundColor {
-  background-color: #f4bb46;
-  color: black;
   animation: BackgroundImageAnimation 6s linear infinite;
 }
 
@@ -90,11 +84,6 @@
   }
 }
 
-.productsSlider {
-  /* -webkit-transition: all 1s ease;
-  transition: all 1s ease; */
-}
-
 .productsSlider > * {
   position: absolute;
   top: 0;
@@ -140,12 +129,14 @@
     visibility: hidden;
     filter: blur(4px);
     opacity: 0;
+    left: 0px;
   }
   49% {
     position: absolute;
     visibility: hidden;
     filter: blur(4px);
     opacity: 0;
+    left: 0px;
   }
   52% {
     position: relative;
@@ -161,80 +152,21 @@
   }
 }
 
-.carribeanBackground {
-  background-color: #37b64d;
-}
-
-.carribeanButtonBackground {
-  background-color: #f5bc47;
-  color: black;
-}
-
-.carribeanLink {
-  color: black;
-}
-
-.argentinaBackground {
-  background-color: #e02626;
-}
-
-.argentinaButtonBackground {
-  background-color: #00adee;
-}
-
-.argentinaLink {
-  color: white;
-}
-
-.otherBackground {
-  background-color: #f6bd48;
-}
-
-.otherButtonBackground {
-  background-color: #1f439d;
-}
-
-.otherLink {
-  color: black;
-}
-
 .storyVideo {
-  width: 80%;
+  /* width: 80%; */
   margin-top: 10%;
-  margin-bottom: 10%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  /* margin-bottom: 10%; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* gap: 1.5rem; */
   position: relative;
-}
-
-.recipeVideo {
   margin-bottom: 1rem;
-}
-
-.storyVideo video {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
 }
 
 .recommendation {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   gap: 1rem;
-  margin-top: 0rem;
-  margin-bottom: 3rem;
-}
-
-.videoRecommendation {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.videoRecommendation .bestMatch {
-  position: absolute;
-  top: 0px;
 }

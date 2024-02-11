@@ -1,18 +1,15 @@
 import Link from 'next/link'
+import { CSSProperties } from 'react'
 import { values } from '../data'
-import pageStyles from './test.module.css'
 
-const valueSections: any[][] = chunk(values, 2)
-
-function chunk(array: any, size: number) {
-  return Array.from({ length: Math.ceil(array.length / size) }, (_, index) =>
-    array.slice(index * size, (index + 1) * size),
-  )
-}
+const colorize = (color: { background: string; text: string }): CSSProperties => ({
+  backgroundColor: color.background,
+  color: color.text,
+})
 
 export default function Values() {
   return (
-    <div className="container" style={{ paddingTop: '5rem', display: 'flex', flexDirection: 'column', gap: '5rem' }}>
+    <div className="container sections" style={{ paddingTop: '5rem', gap: '5rem' }}>
       <h2 className="title">It&apos;s all about the flavors of the world.</h2>
       <p>
         Quis elit cillum occaecat ipsum magna voluptate consequat reprehenderit. Irure eu Lorem anim qui consectetur
@@ -23,35 +20,29 @@ export default function Values() {
         reprehenderit ea.
       </p>
       <div>
-        <div className="gallery">
-          <div className={['item', pageStyles.otherBackground].join(' ')}>
-            <div className={pageStyles.storyVideo} style={{ gap: '3rem', alignItems: 'center' }}>
-              <h3 className="subtitle">We are crafting sauces in a traditional way.</h3>
-              <video loop autoPlay playsInline muted>
-                <source src="https://d3evtkvyiaiw3n.cloudfront.net/intro2.mov" type="video/mp4" />
-              </video>
-              <p>
-                <Link href="/" className="link">
-                  More about our craft
-                </Link>
-              </p>
-            </div>
-          </div>
+        <div className="tile" style={{ gap: '3rem', backgroundColor: 'var(--color-yellow-caribbean)' }}>
+          <h3 className="subtitle">We are crafting sauces in a traditional way.</h3>
+          <video loop autoPlay playsInline muted className="squareVideo">
+            <source src="https://d3evtkvyiaiw3n.cloudfront.net/intro2.mov" type="video/mp4" />
+          </video>
+          <p>
+            <Link href="/" className="link action">
+              More about our craft
+            </Link>
+          </p>
         </div>
-        {valueSections.map((values, key) => (
-          <div className="gallery" key={'gallery-' + key}>
-            {values.map((value, valueKey) => (
-              <div
-                key={'value-' + valueKey}
-                className="tile"
-                style={{ color: value.colors.primary.text, backgroundColor: value.colors.primary.background }}
-              >
-                <h3 className="subtitle">{value.title}</h3>
-                <p>{value.description}</p>
-              </div>
-            ))}
-          </div>
-        ))}
+        <div className="gallery">
+          {values.map((value, valueKey) => (
+            <div
+              key={'value-' + valueKey}
+              className="tile"
+              style={{ ...colorize(value.colors.primary), minWidth: '50%' }}
+            >
+              <h3 className="subtitle">{value.title}</h3>
+              <p>{value.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )

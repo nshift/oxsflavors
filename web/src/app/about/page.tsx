@@ -2,7 +2,7 @@ import Footer from '../footer'
 import Header from '../header'
 import Gallery from './gallery'
 import Landing from './landing'
-import Testimonial from './recommendation'
+import Testimonial from './testimonials'
 import Values from './values'
 
 export default function About() {
