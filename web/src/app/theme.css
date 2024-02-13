@@ -28,6 +28,7 @@
   --header-font-weight: 600;
   --header-logo-size: 44px;
 
+  --footer-padding: 5rem 0;
   --footer-background-color: transparent;
   --footer-text-color: rgba(1, 1, 1, 0.6);
   --footer-sections-flex-direction: row;
@@ -41,8 +42,9 @@
   --container-max-width: 1136px;
 
   --sections-flex-direction: column;
-  --sections-gap: 2rem;
+  --sections-gap: 5rem;
 
+  --landing-container-margin-bottom: -5em;
   --landing-container-height: 600px;
   --landing-container-top: -60px;
   --landing-container-direction: row;
@@ -229,8 +231,7 @@
 */
 
 .footer {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding: var(--footer-padding);
   border-top: 1px solid var(--footer-text-color);
   color: var(--footer-text-color);
   background-color: var(--footer-background-color);
@@ -287,6 +288,7 @@
   flex-direction: var(--landing-container-direction);
   align-items: var(--landing-container-align-items);
   gap: var(--landing-container-gap);
+  margin-bottom: var(--landing-container-margin-bottom);
 }
 
 .landingLargeBlock {
@@ -428,6 +430,7 @@
     --header-links-gap: 0.75rem;
     --header-logo-size: 44px;
 
+    --footer-padding: 2rem 0;
     --footer-sections-flex-direction: row;
     --footer-sections-gap: 1rem;
     --footer-links-flex-direction: column;
@@ -441,6 +444,7 @@
     --sections-flex-direction: column;
     --sections-gap: 2rem;
 
+    --landing-container-margin-bottom: 0;
     --landing-container-height: auto;
     --landing-container-top: 0px;
     --landing-container-direction: column;
@@ -468,7 +472,7 @@
     --tile-gap: 1rem;
     --tile-padding: 10%;
 
-    --square-video-width: 80%;
+    --square-video-width: 100%;
 
     --gallery-flex-direction: column;
     --gallery-item-flex-direction: column;
@@ -489,5 +493,8 @@
   }
   .landingSmallBlock {
     display: none;
+  }
+  .gallery .squareVideo {
+    width: 90%;
   }
 }

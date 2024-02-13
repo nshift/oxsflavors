@@ -2,7 +2,7 @@ import style from './test.module.css'
 
 export default function Testimonials() {
   return (
-    <div className="sections" style={{ gap: '5rem', paddingTop: '5rem' }}>
+    <div className="sections">
       <div className="container">
         <h3 className="title">
           <span className={style.carribeanSauce} style={{ textTransform: 'capitalize' }}>

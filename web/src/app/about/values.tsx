@@ -9,7 +9,7 @@ const colorize = (color: { background: string; text: string }): CSSProperties =>
 
 export default function Values() {
   return (
-    <div className="container sections" style={{ paddingTop: '5rem', gap: '5rem' }}>
+    <div className="container sections">
       <h2 className="title">It&apos;s all about the flavors of the world.</h2>
       <p>
         Quis elit cillum occaecat ipsum magna voluptate consequat reprehenderit. Irure eu Lorem anim qui consectetur
