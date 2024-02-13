@@ -67,8 +67,8 @@
 
   --social-media-posts-flex-direction: row;
   --social-media-posts-gap: 2rem;
-  --social-media-posts-margin-top: 2rem;
-  --social-media-posts-padding: 2rem;
+  --social-media-posts-margin-top: 0;
+  --social-media-posts-padding: 0 2rem;
   --social-media-posts-overflow: hidden;
 
   --tile-flex-direction: column;
@@ -381,6 +381,7 @@
 .socialMediaPosts {
   display: flex;
   flex-direction: var(--social-media-posts-flex-direction);
+  align-items: center;
   gap: var(--social-media-posts-gap);
   margin-top: var(--social-media-posts-margin-top);
   padding: var(--social-media-posts-padding);
@@ -450,7 +451,7 @@
     --landing-container-direction: column;
     --landing-container-align-items: center;
     --landing-container-gap: 1rem;
-    --landing-background-height: 540px;
+    --landing-background-height: 340px;
     --landing-background-skew-y: -12deg;
     --landing-large-block-direction: column;
     --landing-large-block-gap: 2rem;
@@ -464,9 +465,9 @@
 
     --social-media-posts-flex-direction: row;
     --social-media-posts-gap: 2rem;
-    --social-media-posts-margin-top: 2rem;
-    --social-media-posts-padding: 2rem;
-    --social-media-posts-overflow: hidden;
+    --social-media-posts-margin-top: 0;
+    --social-media-posts-padding: 0 2rem;
+    --social-media-posts-overflow: scroll;
 
     --tile-flex-direction: column;
     --tile-gap: 1rem;
